@@ -5,8 +5,9 @@
 
 [Ссылка на проект.](https://www.tinkercad.com/things/lQFXhApmgRb-neat-duup-albar/editel?sharecode=KEmOuWFmRSa9RF8dlvIPBPZ8co_H_y2M2J33ZksteYQ)
 
-![1practic](https://user-images.githubusercontent.com/106704479/195206070-5ec7d0fe-2cd0-4ea4-bda7-e6b46f97fade.jpg)
-![2practic](https://user-images.githubusercontent.com/106704479/195206064-ce495b57-23ee-4264-9df5-e69bdd5a3b57.jpg)
+![1](https://user-images.githubusercontent.com/106704479/193897719-4c1dd533-2833-404c-ac8b-276448080759.jpg)
+![2](https://user-images.githubusercontent.com/106704479/193897715-20efb36d-0d07-4f91-b536-fea0845b13d4.jpg)
+![3](https://user-images.githubusercontent.com/106704479/193897710-2f79733f-9d65-4a3a-96aa-1c1a571e4f14.jpg)
 
 
 //////1
