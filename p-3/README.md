@@ -8,9 +8,9 @@
 
 //////1
 ```С++
-const int PINT_BUTTON = 2;
+const int PIN_BUTTON = 2;
 
-const int PINT_LED = 13;
+const int PIN_LED = 13;
 const int PIN_LED2 = 12;
 const int PIN_LED3 = 11;
 const int PIN_LED4 = 10;
@@ -20,13 +20,13 @@ void setup()
 { 
   Serial.begin(9600);
   pinMode(PIN_LED, OUTPUT);
-  pinMode(PIN_LED2, OUTPUTE);
-  pinMode(PIN_LED3, OUTPUTE);
+  pinMode(PIN_LED2, OUTPUT);
+  pinMode(PIN_LED3, OUTPUT);
 }
 void loop()
 {
   int buttonState = digitalRead(PIN_BUTTON);
-  Serial.println.println(buttonState);
+  Serial.println(buttonState);
   if(!buttonState)
   {
     digitalWrite(PIN_LED3, HIGH);
@@ -55,7 +55,7 @@ void loop()
   delay(500);
   digitalWrite(PIN_LED2,LOW);
   digitalWrite(PIN_LED4, LOW);
-} 
+}
 ```
 
 ## Блок-схема
