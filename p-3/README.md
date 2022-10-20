@@ -3,8 +3,7 @@
 ### Группа 8310
 
 
-[Ссылка на проект.](https://www.tinkercad.com/things/5AFDOCDrbxt-epic-wluff-bojo/editel?sharecode=G_mwpg-2VyFsfjgaEM-KETDrK9ZbcB3vbBt3-r5omFE)
-
+[Ссылка на проект] https://www.tinkercad.com/things/5AFDOCDrbxt-epic-wluff-bojo/editel?sharecode=G_mwpg-2VyFsfjgaEM-KETDrK9ZbcB3vbBt3-r5omFE
 //////1
 ```С++
 const int PINT_BUTTON = 2;
