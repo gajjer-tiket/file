@@ -72,7 +72,7 @@ digitalWrite(13, LOW);
   
 }
 
-
+```
 ## Блок-схема
 ![Диаграмма](![Glorious Trug]()
 )
