@@ -2,197 +2,117 @@
 # file
 =======
 # Отчет №5
-## Холод Егор
+## Билик Михаил
 ### Группа 8310
 
 
 [Ссылка на проект.](https://www.tinkercad.com/things/lQFXhApmgRb-neat-duup-albar/editel?sharecode=KEmOuWFmRSa9RF8dlvIPBPZ8co_H_y2M2J33ZksteYQ)
 
-![1practic](https://user-images.githubusercontent.com/106704479/195206070-5ec7d0fe-2cd0-4ea4-bda7-e6b46f97fade.jpg)
-![2practic](https://user-images.githubusercontent.com/106704479/195206064-ce495b57-23ee-4264-9df5-e69bdd5a3b57.jpg)
+![изображение](https://user-images.githubusercontent.com/115870792/198043119-b4389a1c-d22d-4036-a82a-ea96a987b528.png)
 
 
+```
+С++
 //////1
-```С++
-байт я;
-байт LedMin = 2;
-байт LedMax = 11;
-недействительная установка ()
-{
-  для (i=LedMin;i<=LedMax;i++)
-  {
-    pinMode (я, ВЫВОД);
-  }
-}
 
-пустой цикл ()
-{
-для (i=LedMin;i<=LedMax;i++)
-{
-   цифровая запись (я, ВЫСОКИЙ);
-   задержка(30);
-}
-  для (i=LedMax;i>=LedMin;i--)
-  {
-    цифровая запись (я, НИЗКИЙ);
-   задержка(30);
-  }
-}
-```
-
-## Блок-схема
-![Диограмма]()
-
-//////2
-```С++
-байт я;
-байт LedMin = 2;
-байт LedMax = 11;
-недействительная установка ()
-{
-для (i=LedMin;i<=LedMax;i=i+2)
-{
-pinMode (я, ВЫВОД);
-}
-}
-
-пустой цикл ()
-{
-для (i=LedMin;i<=LedMax;i=i+2)
-{
-цифровая запись (я, ВЫСОКИЙ);
-задержка(50);
-}
-для (i=LedMax;i>=LedMin;i--)
-{
-цифровая запись (я, НИЗКИЙ);
-задержка(50);
-}
-}
-```
-
-//////3
-```С++
-байт я;
-байт LedMin = 1;
-байт LedMax = 11;
-недействительная установка ()
-{
-  для (i-LedMin;i<-LedMax;i++)
-  {
-    pinMode (я, ВЫВОД);
-  }
-}
-
-пустой цикл ()
-{
-для (i-LedMin;i<-LedMax;i++)
-{
-   цифровая запись (я, ВЫСОКИЙ);
-   задержка(50);
-}
-  для (i_LedMin;i<_LedMax;i++)
-  {
-    цифровая запись (я, НИЗКИЙ);
-   задержка(50);
-  }
-}
-```
-
-## Пояснение
-
-
-
-# Отчет №3
-## Холод Егор 
-### Группа 8310
-
-
-[Ссылка на проект.](https://www.tinkercad.com/things/2h2PYAX99Xw-mighty-vihelmo/editel?sharecode=JL_i5blaRzfTj0_JZVbL4Gr7MOY9x_tiIVRUqERQISQ)
-
-![1](https://user-images.githubusercontent.com/106704479/193897719-4c1dd533-2833-404c-ac8b-276448080759.jpg)
-![2](https://user-images.githubusercontent.com/106704479/193897715-20efb36d-0d07-4f91-b536-fea0845b13d4.jpg)
-![3](https://user-images.githubusercontent.com/106704479/193897710-2f79733f-9d65-4a3a-96aa-1c1a571e4f14.jpg)
-
-//////4 
-```C++
-int led1 = 2;
-int led2 = 3;
-int led3 = 4;
-void setup()
+#include<LiquidCrystal.h> 
+#include<Keypad.h>  
+ 
+int a; 
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2); 
+ 
+const byte ROWS = 3;  
+const byte COLS = 3;  
+char hexaKeys[ROWS][COLS] =  
 { 
-pinMode(led1, OUTPUT); 
-pinMode(led2, OUTPUT);
-pinMode(led3, OUTPUT);
+{'1','4','7',},  
+{'2','5','8',}, 
+{'3','6','9',}, 
+ 
+}; 
+byte rowPins[ROWS] = {8, 7, 6 };  
+byte colPins[COLS] = {13, 10, 9 };  
+ 
+Keypad customKeypad = Keypad( makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS);  
+ 
+void setup() { 
+   
+  lcd.begin(16, 23); 
+ 
+ // lcd.print("hello, world!"); 
 } 
-void loop()
-{ 
-digitalWrite(led1, HIGH);
-delay(9000);
-digitalWrite(led2, HIGH);
-delay(4000);
-digitalWrite(led2, LOW);
-digitalWrite(led1, LOW);
-digitalWrite(led3, HIGH);
-delay(4000);
-digitalWrite(led3, LOW);
-digitalWrite(led2, HIGH);
-delay(4000);
-digitalWrite(led2, LOW);
-digitalWrite(led1, HIGH);
-delay(9000);
-digitalWrite(led2, HIGH);
-delay(4000);
-digitalWrite(led2, LOW);
-digitalWrite(led1, LOW);
-digitalWrite(led3, HIGH);
-delay(4000);
-digitalWrite(led3, LOW);
-digitalWrite(led2, HIGH);
-delay(4000);
+ 
+void loop() { 
+  char customKey = customKeypad.getKey();  
+   
+  switch (customKey){ 
+case '1': 
+    lcd.clear(); 
+    lcd.setCursor(0, 0); 
+  lcd.print('1');  
+    a=1; 
+  break;  
+case '2': 
+    lcd.clear(); 
+    lcd.setCursor(0, 0); 
+  lcd.print('2'); 
+    a=2; 
+  break;  
+case '3':  
+    lcd.clear(); 
+    lcd.setCursor(0, 0); 
+  lcd.print('3'); 
+    a=3; 
+  break;  
+case '4':  
+    lcd.clear(); 
+    lcd.setCursor(0, 0); 
+  lcd.print('4'); 
+    a=4; 
+  break;  
+case '5':  
+    lcd.clear(); 
+    lcd.setCursor(0, 0); 
+  lcd.print('5');  
+    a=5; 
+  break;  
+case '6':  
+    lcd.clear(); 
+    lcd.setCursor(0, 0); 
+  lcd.print('6'); 
+    a=6; 
+  break;  
+case '7':  
+    lcd.clear(); 
+    lcd.setCursor(0, 0); 
+  lcd.print('7'); 
+    a=7; 
+  break;  
+case '8':  
+    lcd.clear(); 
+    lcd.setCursor(0, 0); 
+  lcd.print('8');  
+    a=8; 
+  break;  
+case '9':  
+    lcd.clear(); 
+    lcd.setCursor(0, 0); 
+  lcd.print('9');  
+    a=9; 
+ break; 
+  } 
+  if ( a%2==0) 
+  { 
+  lcd.setCursor(0, 1); 
+     lcd.print("Chetnoe"); 
+  } 
+  else 
+  { 
+  lcd.setCursor(0, 1); 
+    lcd.print("Ne Chetnoe");    
+  } 
 }
-```
 
-## Блок-схема
-![Диограм](https://user-images.githubusercontent.com/106704479/193923224-e884a214-7436-4b28-a09f-7624275c065e.jpg))
-
-//////3.1 
-```C++
-int led1 = 2; 
-int led2 = 3; 
-void setup()
-{ 
-pinMode(led1, OUTPUT);
-pinMode(led2, OUTPUT);
-} 
-void loop()
-{ digitalWrite(led1, HIGH);
-delay(4000);
-digitalWrite(led1, LOW);
-delay(1000); 
-digitalWrite(led2, HIGH); delay(6000);
-digitalWrite(led2, LOW);
-delay(1000);
-} 
-```
-
-//////3.2 
-```C++
-int led1 = 2;
-int led2 = 3;
-void setup() 
-{ 
-pinMode(led1, OUTPUT);
-pinMode(led2, OUTPUT);
-} 
-void loop() 
-{ 
-digitalWrite(led2, HIGH);
-digitalWrite(led1, HIGH);
-delay(10000);
-digitalWrite(led1, LOW);
-delay(4000); 
-}
 ```
 
 ## Пояснение
